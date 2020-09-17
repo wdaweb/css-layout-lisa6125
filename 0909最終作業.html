@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0px;
+        }
+
+        body {
+            background: linear-gradient(rgb(255, 255, 255) 0%,
+                    rgb(255, 255, 255) 70%,
+                    rgb(228, 228, 228) 80%,
+                    rgb(139, 139, 139) 100%);
+        }
+
+        .container {
+            width: 1452px;
+            height: 629px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 10px 10px 10px rgb(212, 212, 212);
+            -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.438));
+        }
+
+        .container:hover {
+            width: 1475px;
+        }
+
+        .container::before,
+        .container::after {
+            content: "";
+            border: 10px solid rgb(44, 44, 88);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: -40px;
+            /*clip (top,right,bottom,left) */
+
+            animation: borderClip 5s linear infinite;
+        }
+
+        .container::after {
+            animation-delay: -3s;
+        }
+
+        .container:hover::before,
+        .container:hover::after {
+            animation-play-state: paused;
+        }
+
+        @keyframes borderClip {
+
+            0%,
+            100% {
+                clip: rect(0px, 1600px, 4px, 0px);
+            }
+
+            25% {
+                clip: rect(0px, 4px, 690px, 0px);
+            }
+
+            50% {
+                clip: rect(687px, 1300px, 1600px, 0px);
+            }
+
+            90% {
+                clip: rect(0px, 1600px, 690px, 1413px);
+            }
+        }
+
+        .card {
+            display: inline-block;
+            width: 360px;
+            height: 625px;
+            border: 1px solid rgb(230, 230, 230);
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            border-radius: 80px 80px 80px 80px/30px 30px 30px 30px;
+            margin-right: 19px;
+            box-shadow: 0 0 20px 5px rgb(255, 251, 214);
+            background: linear-gradient(90deg,
+                    rgb(236, 236, 236) 0%,
+                    rgb(255, 255, 255) 20%,
+                    rgb(255, 255, 255) 80%,
+                    rgb(236, 236, 236) 100%);
+        }
+
+        img {
+            position: absolute;
+            top: 160px;
+            left: 180px;
+            transform: translate(-50%, -50%);
+            border-radius: 65px;
+            display: block;
+            transition-property: border-radius, width, box-shadow;
+            transition-duration: 1s, 3s, 1s;
+        }
+
+        img:hover {
+            border-radius: 25px;
+            width: 160px;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px 5px rgb(247, 243, 210);
+        }
+
+        p {
+            position: absolute;
+            padding: 20px;
+            top: 280px;
+            font-size: 16px;
+        }
+
+        .bg1 {
+            background: linear-gradient(90deg,
+                    rgb(255, 255, 255) 0%,
+                    rgb(255, 255, 255) 90%,
+                    rgb(240, 240, 240) 100%);
+        }
+
+        .bg2 {
+            background: linear-gradient(90deg,
+                    rgb(248, 248, 248) 0%,
+                    rgb(255, 255, 255) 10%,
+                    rgb(255, 255, 255) 90%,
+                    rgb(240, 240, 240) 100%);
+        }
+
+        .bg3 {
+            background: linear-gradient(90deg,
+                    rgb(240, 240, 240) 0%,
+                    rgb(255, 255, 255) 10%,
+                    rgb(255, 255, 255) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card bg1">
+            <img src="https://picsum.photos/130/130/?random=1" />
+            <p>
+                溫柔投入不太上路讓我們姓名，一眼身材垃圾至少及時，實際上你怎不來合適不是電子財務商務空氣，巨大還會有意加入時間處於熱情本網嚴重天下當前身影，資產他也臉色，作家排名農業爸爸形象，答應可能，一定魯蛇招聘巨大還會有意加入時間處於熱情本網嚴重天下當前身影。
+            </p>
+        </div>
+        <div class="card bg2">
+            <img src="https://picsum.photos/130/130/?random=2" />
+            <p>
+                溫柔投入不太上路讓我們姓名，一眼身材垃圾至少及時，實際上你怎不來合適不是電子財務商務空氣，巨大還會有意加入時間處於熱情本巨大還會有意加入時間處於熱情本網嚴重天下當前身影網嚴重天下當前身影，資產他也臉色，作家排名農業爸爸形象，答應可能，一定魯蛇招聘。
+            </p>
+        </div>
+        <div class="card bg2">
+            <img src="https://picsum.photos/130/130/?random=3" />
+            <p>
+                溫柔投入不太上路讓我們姓名，一眼身材垃圾至少及時，實際上你怎不來合適不是電子財務商務空氣，巨大還會有意加入時間處於熱情本網嚴重天下當前身影，資產他也臉色，作家排名農業爸爸形象，答應可能，一巨大還會有意加入時間處於熱情本網嚴重天下當前身影定魯蛇招聘。
+            </p>
+        </div>
+        <div class="card bg3">
+            <img src="https://picsum.photos/130/130/?random=4" />
+            <p>
+                溫柔投入不太上路讓我們姓名，一眼身材垃圾至少及時，實際上你怎不來合適不是電子財務商務空氣，巨大還會有意加入時間處於熱巨大還會有意加入時間處於熱情本網嚴重天下當前身影情本網嚴重天下當前身影，資產他也臉色，作家排名農業爸爸形象，答應可能，一定魯蛇招聘。
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
